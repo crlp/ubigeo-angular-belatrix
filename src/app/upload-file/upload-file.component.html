@@ -1,0 +1,69 @@
+<h3>Seleccione un archivo</h3>
+<input type="file" (change)="onChange($event.target.files)">
+
+<div *ngIf="condition">
+  <h2>------------------------</h2>
+  <h2>Resultado</h2>
+  <h2>------------------------</h2>
+  <h3>Departamentos</h3>
+  <table class="table" id="tableDepartamentos">
+    <thead class="thead-dark">
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Codigo padre</th>
+        <th>Descripcion padre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of departamentos;">
+        <td>{{item.codigo}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>--</td>
+        <td>--</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Provincias</h3>
+  <table class="table" id="tableProvincias">
+    <thead class="thead-dark">
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Codigo padre</th>
+        <th>Descripcion padre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of provincias;">
+
+        <td>{{item.codigo}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>{{item.codigoDepartamento}}</td>
+        <td>{{item.descripcionDepartamento}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Distritos</h3>
+  <table class="table" id="tableDistritos">
+    <thead class="thead-dark">
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Codigo padre</th>
+        <th>Descripcion padre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of distritos;">
+        <td>{{item.codigo}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>{{item.codigoProvincia}}</td>
+        <td>{{item.descripcionProvincia}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
