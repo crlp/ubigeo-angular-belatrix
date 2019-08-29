@@ -1,0 +1,20 @@
+<h3>Provincias</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Codigo padre</th>
+      <th>Descripcion padre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of provincias;">
+
+      <td>{{item.codigo}}</td>
+      <td>{{item.descripcion}}</td>
+      <td>{{item.codigoDepartamento}}</td>
+      <td>{{item.descripcionDepartamento}}</td>
+    </tr>
+  </tbody>
+</table>

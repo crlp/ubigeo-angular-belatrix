@@ -3,12 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
+import { DepartamentoComponent } from './departamento/departamento.component';
+import { ProvinciaComponent } from './provincia/provincia.component';
+import { DistritoComponent } from './distrito/distrito.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UploadFileComponent
+    UploadFileComponent,
+    DepartamentoComponent,
+    ProvinciaComponent,
+    DistritoComponent
   ],
   imports: [
     BrowserModule,

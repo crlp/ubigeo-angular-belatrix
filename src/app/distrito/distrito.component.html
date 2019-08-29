@@ -1,0 +1,19 @@
+<h3>Distritos</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Codigo padre</th>
+      <th>Descripcion padre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of distritos;">
+      <td>{{item.codigo}}</td>
+      <td>{{item.descripcion}}</td>
+      <td>{{item.codigoProvincia}}</td>
+      <td>{{item.descripcionProvincia}}</td>
+    </tr>
+  </tbody>
+</table>

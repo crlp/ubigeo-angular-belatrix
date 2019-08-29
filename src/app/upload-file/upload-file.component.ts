@@ -97,7 +97,6 @@ export class UploadFileComponent {
           break;
       };
     })
-
     this.condition = true;
   }
 
